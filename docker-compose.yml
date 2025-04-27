@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./front
+      dockerfile: Dockerfile.front
+    restart: always
+    ports:
+      -  "8090:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./back
+      dockerfile: Dockerfile.back
+    restart: always
+    ports:
+      -  "10000:10000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

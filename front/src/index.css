@@ -1,0 +1,13 @@
+/* index.css */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  background-color: #121212; /* fondo oscuro para dark mode */
+  color: #fff; /* texto por default en blanco */
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
