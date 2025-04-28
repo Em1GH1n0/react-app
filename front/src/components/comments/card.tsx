@@ -21,19 +21,16 @@ const BasicCard: React.FC<CardProps> = ({
   return (
     <Card
       sx={{
-        width: 250, // Ancho fijo en px
+        width: 300, // Ancho fijo en px
         height: 300, // Alto fijo en px
         display: "flex",
-        flexDirection: "column", // Para mantener una distribución de columna dentro del card
-        overflow: "hidden", // Asegura que el contenido no se desborde
+        flexDirection: "column",
+        overflow: "hidden",
       }}
     >
       <CardContent sx={{ flexGrow: 1, maxHeight: 200, overflow: "auto" }}>
-        {/* Usamos un div para el título */}
         <div style={{ color: "white", fontSize: 14 }}>{title}</div>
-        {/* Usamos un div para el subtítulo */}
         <div style={{ fontSize: 20, fontWeight: "bold" }}>{subtitle}</div>
-        {/* Usamos un div para la descripción con un control de desbordamiento */}
         <div
           style={{
             marginTop: 16,

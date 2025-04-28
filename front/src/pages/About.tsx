@@ -1,3 +1,9 @@
+import ResponsiveDashboard from "../components/grid/dashboard";
+
 export default function About() {
-  return <h1>Page 2</h1>;
+  return (
+    <>
+    <ResponsiveDashboard />
+    </>
+  )
 }

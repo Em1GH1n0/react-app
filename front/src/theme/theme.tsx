@@ -8,23 +8,40 @@ const theme = createTheme({
       main: "#1976d2", // azul default
     },
     secondary: {
-      main: "#dc004e", // rojo fucsia
+      main: "#dc004e", // rojo fucsia<ThemeProvider theme={theme}>
     },
     background: {
       default: "#000000", // Fondo negro
       paper: "#121212", // Fondo de tarjetas, dialogos, etc (opcional)
     },
   },
-  // breakpoints: {
-  //   values: {
-  //     laptop: 1024,
-  //     tablet: 640,
-  //     mobile: 0,
-  //     desktop: 1280,
-  //   },
-  // },
   typography: {
     fontFamily: "Roboto, Arial, sans-serif",
+  },
+  components: {
+    MuiBox: {
+      styleOverrides: {
+        root: {
+          width: "100%",
+          flexShrink: 0, // Evita compresión no deseada
+        },
+      },
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          padding: theme.spacing(3),
+          "&:last-child": {
+            paddingBottom: theme.spacing(3), // Elimina el padding inferior por defecto
+          },
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          flexGrow: 1,
+        }),
+      },
+    },
   },
 });
 
