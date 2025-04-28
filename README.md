@@ -1,6 +1,7 @@
 # ReactApp
 
 Aplicacion de prueba
+Se desarrolló una app sencilla compuesta back (Nodejs Express), front (reactjs) para consumir una api publica de JSON placeholder
 
 ## Características
 
@@ -12,6 +13,7 @@ Aplicacion de prueba
   - Redux
   - Axios
   - NodeJs - Express
+  - NGINX - Web Server
 
 - **Funcionalidades principales:**
   - Interfaz de usuario para comentarios.
