@@ -6,8 +6,10 @@ services:
       context: ./front
       dockerfile: Dockerfile.front
     restart: always
+    env_file:
+      - .env
     ports:
-      -  "8090:80"
+      -  "${FRONT_PORT}:80"
     depends_on:
       - backend
     networks:
@@ -18,8 +20,10 @@ services:
       context: ./back
       dockerfile: Dockerfile.back
     restart: always
+    env_file:
+      - .env
     ports:
-      -  "10000:10000"
+      -  "${BACK_PORT}:3000"
     networks:
       - app-network
 

@@ -40,7 +40,13 @@ Sigue estos pasos para configurar el proyecto en tu entorno local.
    ```bash
    git clone https://github.com/Em1GH1n0/react-app.git
 
-2. **Hacer el setup de la app**
+1. **Crear .env a nivel del docker-compose:**
+
+   ```bash
+   FRONT_PORT=
+   BACK_PORT=
+
+3. **Hacer el setup de la app**
     ```bash
     docker compose up --build
 
